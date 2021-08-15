@@ -1,0 +1,10 @@
+.gradle
+.vscode
+bin
+build
+run
+mod_Client.launch
+mod_Server.launch
+.settings
+.classpath
+.project

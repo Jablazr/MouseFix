@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mousefix",
+  "name": "mousefix",
+  "description": "Fix mouse buttons 4 & 5.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["react7"],
+  "credits": "The nice Forge and FML guys",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
