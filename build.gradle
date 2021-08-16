@@ -30,7 +30,8 @@ minecraft {
 }
 
 dependencies {
-
+    // https://mvnrepository.com/artifact/com.1stleg/jnativehook
+    compile 'com.1stleg:jnativehook:2.1.0'
 }
 
 processResources {
