@@ -8,3 +8,4 @@ mod_Server.launch
 .settings
 .classpath
 .project
+libs

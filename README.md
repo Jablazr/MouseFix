@@ -1,14 +1,19 @@
-How to develop in VSCode:  
+# Mousefix for 1.8.9
 
-    clone repo
-    cd into folder
-    code .
+## How to develop mod
+
+### Setting up the project:  
+
     gradle refresh
     gradlew eclipse
     gradlew setupDecompWorkspace
+
+### Testing in game:  
+
     gradlew runClient
 
-How to build:  
+### Building the mod jar:  
 
     gradlew build
-    mod jar is in build/libs
+
+Mod jar is in build/libs
