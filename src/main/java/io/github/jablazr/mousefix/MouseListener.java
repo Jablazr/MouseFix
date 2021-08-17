@@ -11,9 +11,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class MouseListener implements NativeMouseInputListener {
   @Override
   public void nativeMousePressed(NativeMouseEvent nativeEvent) {
-    // System.out.println(nativeEvent.getButton());
+    int button = nativeEvent.getButton();
 
-    if (nativeEvent.getButton() == 5) {
+    // toggle f5
+    if (button == 5) {
       Minecraft mc = Minecraft.getMinecraft();
 
       if (mc.gameSettings.thirdPersonView == 2) {
@@ -23,6 +24,11 @@ public class MouseListener implements NativeMouseInputListener {
       }
 
       // System.out.println(mc.gameSettings.thirdPersonView);
+    }
+
+    // toggle zoom
+    if (button == 4) {
+      Minecraft mc = Minecraft.getMinecraft();
     }
   }
 

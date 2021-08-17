@@ -7,6 +7,7 @@ import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.mouse.NativeMouseListener;
 
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -24,7 +25,9 @@ public class Main {
       System.err.println("There was a problem registering the native hook.");
       System.err.println(ex.getMessage());
 
-      System.exit(1);
+      FMLCommonHandler.instance().exitJava(1, false);
+      // not allowed
+      // System.exit(1);
     }
 
     // Get the logger for "com.github.kwhat.jnativehook" and set the level to off.

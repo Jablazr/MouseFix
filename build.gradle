@@ -13,8 +13,11 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 version = "0.1.0"
-group= "io.github.jablazr.mousefix" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = "io.github.jablazr.mousefix" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "mousefix"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 minecraft {
     version = "1.8.9-11.15.1.2318-1.8.9"
