@@ -7,8 +7,15 @@ import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@SideOnly(Side.CLIENT)
 public class MouseListener implements NativeMouseInputListener {
+  private float fov;
+  // fov
+  // Normal: 70.0
+  // 100: 100.0
+  // 30: 30.0
+  // Quake Pro: 110.0
+  private final float zoomMultiplier = 0.25f;
+
   @Override
   public void nativeMousePressed(NativeMouseEvent nativeEvent) {
     int button = nativeEvent.getButton();
@@ -22,24 +29,32 @@ public class MouseListener implements NativeMouseInputListener {
       } else {
         mc.gameSettings.thirdPersonView += 1;
       }
-
-      // System.out.println(mc.gameSettings.thirdPersonView);
     }
 
-    // toggle zoom
+    // zoom on
     if (button == 4) {
       Minecraft mc = Minecraft.getMinecraft();
+
+      fov = mc.gameSettings.fovSetting;
+
+      mc.gameSettings.fovSetting *= zoomMultiplier;
+    }
+  }
+
+  @Override
+  public void nativeMouseReleased(NativeMouseEvent nativeEvent) {
+    int button = nativeEvent.getButton();
+
+    // zoom off
+    if (button == 4) {
+      Minecraft mc = Minecraft.getMinecraft();
+
+      mc.gameSettings.fovSetting = fov;
     }
   }
 
   @Override
   public void nativeMouseClicked(NativeMouseEvent nativeEvent) {
-    // TODO Auto-generated method stub
-
-  }
-
-  @Override
-  public void nativeMouseReleased(NativeMouseEvent nativeEvent) {
     // TODO Auto-generated method stub
 
   }
