@@ -26,8 +26,6 @@ public class Main {
       System.err.println(ex.getMessage());
 
       FMLCommonHandler.instance().exitJava(1, false);
-      // not allowed
-      // System.exit(1);
     }
 
     // Get the logger for "com.github.kwhat.jnativehook" and set the level to off.
